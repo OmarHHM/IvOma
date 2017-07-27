@@ -1,5 +1,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 
@@ -12,36 +13,37 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Registrar Producto</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-	<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+	<link href="${contextPath}/resources/css/bootstrap.min.css" rel="stylesheet">
 	<link href="${contextPath}/resources/css/style.css" rel="stylesheet" />
+    <script src="${contextPath}/resources/js/jquery.min.js"></script>
+	<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
+	<script src="${contextPath}/resources/js/products/products.js"></script>
+	
 </head>
 <body> 
-	<form class="contact_form"  modelAttribute="productForm" id="contact_form" method="POST" > 
-
+	<form:form class="contact_form"  modelAttribute="productForm" id="contact_form" method="POST" >
 	<div id ="principal"> 
-
 		<h2>Productos</h2> 
 		<span class="required_notification" >* Datos requeridos</span>
 		<table>
 			<tr> 
 				<td>
 					<label for="idProduct">Número de Producto:</label> 
-					<input type="text" /> 
+					<input id ="id" type="text" /> 
 				</td>
 				<td> 
 					<label for="desc">Descripción del Producto:</label> 
-					<input type="text"  required /> 
+					<input id="description" type="text"  required /> 
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<label for="unitP">Precio Unitario:</label> 
-					<input type="text" maxlenght="20" required/> 
+					<input id="unitPrice" type="text" maxlenght="20" required/> 
 				</td>
 				<td> 
 					<label for="descuent">Descuento:</label> 
-					<input type="text" id="disccount"  required /> 
+					<input id="discount" type="text" id="disccount"  required /> 
 				</td>
 			</tr>
 			<tr>
@@ -52,13 +54,13 @@
 			
 			 	<td> 
 					<label for="exist">Existencia:</label> 
-					<input type="text" name="existence"  required  /> 
+					<input id="existence" type="text" name="existence"  required  /> 
 				</td>
 			</tr>
 			<tr>
 				<td>
 					<label for="ima">Imagen:</label> 
-					<input type="url" name="urlImage"  required  /> 
+					<input id="urlImage" type="url" name="urlImage"  required  /> 
 				</td>
 			</tr>
 			 
@@ -66,12 +68,14 @@
 				<label for="message">Mensaje:</label> 
 				<textarea name="message" cols="40" rows="6" required></textarea> 
 			</li>  -->
+			
 		</table>
-			<div  ALIGN="right">
-				<button  class="submit" type="submit">Registrar</button> 		
-			</div>	
+		<div align="right">
+			<button  id="agregar" class="submit" type="submit">Registrar</button> 	
+			<button  id="modificar" class="submit" type="submit">Modificar</button> 
+			<button  id="eliminar" class="submit" type="submit">Eliminar</button> 		
+		</div>
 	</div> 
-
-	</form> 
+	</form:form> 
 </body> 
 </html>

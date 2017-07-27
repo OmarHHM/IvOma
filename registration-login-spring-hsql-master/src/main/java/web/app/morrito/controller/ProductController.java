@@ -16,17 +16,32 @@ public class ProductController {
   @Autowired
     private ProductService productService;
 
-	 
+	/*Redirect Products*/
   	@RequestMapping(value = {"/", "/products"}, method = RequestMethod.GET)
     public String product(Model model) {
         return "product";
     }
     
-    @RequestMapping(value = {"/", "/products"}, method = RequestMethod.POST)
+
+	/*addProducts*/
+    @RequestMapping(value = {"/", "/addproduct"}, method = RequestMethod.POST)
     public String addProduct(@ModelAttribute("productForm") Product product,   Model model) {
     	Product pro= productService.save(product);
         return "product";
     }
 	
+    /*deleteProducts*/
+    @RequestMapping(value = {"/", "/deleteProduct"}, method = RequestMethod.POST)
+    public String deleteProduct(@ModelAttribute("productForm") Product product,   Model model) {
+    	Product pro= productService.save(product);
+        return "product";
+    }
+
+    /*getProducts*/
+    @RequestMapping(value = {"/", "/getProduct"}, method = RequestMethod.GET)
+    public String getProduct(@ModelAttribute("productForm") Product product,   Model model) {
+    	Product pro= productService.save(product);
+        return "product";
+    }
     
 }
