@@ -1,10 +1,14 @@
 package web.app.morrito.model;
 
 import javax.persistence.*;
+
+import org.directwebremoting.annotations.DataTransferObject;
+
 import java.util.Set;
 
 @Entity
 @Table(name = "users")
+@DataTransferObject
 public class User {
     private Long id;
     private String username;

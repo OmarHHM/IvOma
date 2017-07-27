@@ -1,0 +1,49 @@
+package web.app.morrito.settings;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties(prefix="dwr")
+public class DwrSettings{
+		/**
+	 * 
+	 */
+    private boolean debug = false;
+    /**
+     * 
+     */
+    private boolean scriptCompressed = true;
+    
+	/*-------------------------------------------------------------------
+	 * 		 				 GETTERS AND SETTERS
+	 *-------------------------------------------------------------------*/
+	/**
+	 * @return the debug
+	 */
+	public boolean isDebug()
+	{
+		return debug;
+	}
+	/**
+	 * @param debug the debug to set
+	 */
+	public void setDebug( boolean debug )
+	{
+		this.debug = debug;
+	}
+	/**
+	 * @return the scriptCompressed
+	 */
+	public boolean isScriptCompressed()
+	{
+		return scriptCompressed;
+	}
+	/**
+	 * @param scriptCompressed the scriptCompressed to set
+	 */
+	public void setScriptCompressed( boolean scriptCompressed )
+	{
+		this.scriptCompressed = scriptCompressed;
+	}
+}

@@ -8,8 +8,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.directwebremoting.annotations.DataTransferObject;
+
 @Entity
 @Table(name = "products")
+@DataTransferObject
 public class Product {
 
 	private Long id;

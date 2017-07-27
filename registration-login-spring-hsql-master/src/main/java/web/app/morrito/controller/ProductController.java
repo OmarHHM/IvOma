@@ -1,5 +1,7 @@
 package web.app.morrito.controller;
 
+import org.directwebremoting.annotations.RemoteMethod;
+import org.directwebremoting.annotations.RemoteProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -11,6 +13,7 @@ import web.app.morrito.model.Product;
 import web.app.morrito.service.ProductService;
 
 @Controller
+@RemoteProxy
 public class ProductController {
 
   @Autowired
@@ -38,6 +41,7 @@ public class ProductController {
     }
 
     /*getProducts*/
+    @RemoteMethod 
     @RequestMapping(value = {"/", "/getProduct"}, method = RequestMethod.GET)
     public String getProduct(@ModelAttribute("productForm") Product product,   Model model) {
     	Product pro= productService.save(product);
