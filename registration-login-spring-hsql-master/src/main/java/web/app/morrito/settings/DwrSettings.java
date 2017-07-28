@@ -3,8 +3,8 @@ package web.app.morrito.settings;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-@Component
-@ConfigurationProperties(prefix="dwr")
+//@Component
+//@ConfigurationProperties(prefix="dwr")
 public class DwrSettings{
 		/**
 	 * 

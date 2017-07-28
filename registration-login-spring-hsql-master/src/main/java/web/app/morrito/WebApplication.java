@@ -32,22 +32,19 @@ public class WebApplication extends SpringBootServletInitializer {
         SpringApplication.run(WebApplication.class, args);
     }
     
-    
+    /*
     @Bean
 	public DwrAnnotationPostProcessor dwrAnnotationPostProcessor( ApplicationContext applicationContext )
 	{
 		final BeanDefinitionRegistry beanDefinitionRegistry = (BeanDefinitionRegistry) applicationContext.getAutowireCapableBeanFactory();
-		final ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner /*DwrClassPathBeanDefinitionScanner*/(beanDefinitionRegistry);
+		final ClassPathBeanDefinitionScanner scanner = new ClassPathBeanDefinitionScanner (beanDefinitionRegistry);
         scanner.addIncludeFilter(new AnnotationTypeFilter(DataTransferObject.class));
         scanner.scan("web.app.morrito.model.**");
         
 		return new DwrAnnotationPostProcessor();
-	}
+	}*/
 
-	/**
-	 * 
-	 * @return
-	 */
+	/*
 	@Bean
 	public ServletRegistrationBean dwrSpringServletRegistration( DwrSettings dwrSettings )
 	{
@@ -56,6 +53,6 @@ public class WebApplication extends SpringBootServletInitializer {
 		registration.addInitParameter( "scriptCompressed", String.valueOf(dwrSettings.isScriptCompressed()) );
 		registration.setName( "dwrSpringServlet" );
 		return registration;
-	}
+	}*/
     
 }

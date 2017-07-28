@@ -22,6 +22,13 @@ $(document).ready(function() {
 	});
 	
 	function consultaIdProduct(id){
-		
+//		 $.get("/getProduct",
+//				 {
+//			 		id=id
+//				 },
+//				 function(data, status){
+//				 }
+//				 	alert("Data: " + data + "\nStatus: " + status);
+//		    });
 	}
 });
