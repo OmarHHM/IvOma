@@ -13,6 +13,7 @@ import web.app.morrito.model.User;
 import web.app.morrito.service.SecurityService;
 import web.app.morrito.service.UserService;
 import web.app.morrito.validator.UserValidator;
+
 @Controller
 public class UserController {
 	private Logger log = Logger.getLogger(UserController.class);

@@ -1,5 +1,6 @@
 package web.app.morrito.controller;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 
 import org.directwebremoting.annotations.RemoteMethod;
@@ -15,7 +16,7 @@ import web.app.morrito.model.Product;
 import web.app.morrito.service.ProductService;
 
 @Controller
-//@RemoteProxy
+@RemoteProxy(name="ajaxController")
 public class ProductController {
 
   @Autowired
@@ -43,10 +44,19 @@ public class ProductController {
     }
 
     /*getProducts :::::::::: Se ocupa para buscar un producto de la BD con su id */
-  //  @RemoteMethod 
-    @RequestMapping(value = {"/", "/getProduct"}, method = RequestMethod.GET)
-    public Product getProduct(@ModelAttribute("productForm") Product product) {
-    	Product pro= productService.getProducts(product);
+    @RemoteMethod 
+   // @RequestMapping(value = {"/", "/getProduct"}, method = RequestMethod.GET)
+    public Product getProduct() {
+    	Product pro = new Product(); 
+    	pro.setDescription("Primer producto");
+    	pro.setDiscount(new  BigDecimal("100.00"));
+    	pro.setExistence(Long.valueOf("90"));
+    	pro.setId(Long.valueOf("100000"));
+    	pro.setIdCategoria(Long.valueOf("1"));
+    	pro.setTotal(new  BigDecimal("100.00"));
+    	pro.setUnitPrice(new  BigDecimal("100.00"));
+    	pro.setUrlImage("https://www.google.com.mx/search?q=imagen&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjV887i3bbVAhUs6IMKHU0jCGsQ_AUICigB&biw=1366&bih=662#imgrc=NIkfcA3v4RfGAM:");
+    	//= productService.getProducts(product);
         return pro;
     }
     

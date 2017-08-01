@@ -9,19 +9,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import org.directwebremoting.annotations.DataTransferObject;
+import org.directwebremoting.annotations.RemoteProperty;
 
 @Entity
 @Table(name = "products")
 @DataTransferObject
 public class Product {
-
+	@RemoteProperty
 	private Long id;
+	@RemoteProperty
 	private String description;
+	@RemoteProperty
 	private BigDecimal unitPrice;
+	@RemoteProperty
 	private BigDecimal discount;
+	@RemoteProperty
 	private BigDecimal total;
+	@RemoteProperty
 	private Long existence;
+	@RemoteProperty
 	private String urlImage;
+	@RemoteProperty
 	private Long idCategoria;
 	
 	
