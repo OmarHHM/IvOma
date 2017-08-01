@@ -21,7 +21,7 @@
 	
 </head>
 <body> 
-	<form:form class="contact_form"  modelAttribute="productForm" id="contact_form" method="POST" >
+	<form:form class="contact_form"  modelAttribute="productForm" id="contact_form" method="GET" >
 	<div id ="principal"> 
 		<h2>Productos</h2> 
 		<span class="required_notification" >* Datos requeridos</span>
