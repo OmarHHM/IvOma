@@ -19,13 +19,13 @@ import web.app.morrito.service.ProductService;
 import web.app.morrito.settings.DwrService;
 
 @Controller
-//@RemoteProxy(name="ajaxController")
+@RemoteProxy(name="dwrService")
 public class ProductController {
 
     @Autowired
     private ProductService productService;
-    @Resource(name="springService")
-    DwrService dwrService;
+//    @Resource(name="springService")
+//    DwrService dwrService;
 	/*Redirect Products*/
   	@RequestMapping(value = {"/", "/products"}, method = RequestMethod.GET)
     public String product(Model model) {
@@ -48,8 +48,8 @@ public class ProductController {
     }
 
     /*getProducts :::::::::: Se ocupa para buscar un producto de la BD con su id */
-   // @RemoteMethod 
-    @RequestMapping(value = {"/", "/getProduct"}, method = RequestMethod.GET)
+    @RemoteMethod 
+  //  @RequestMapping(value = {"/", "/getProduct"}, method = RequestMethod.GET)
     public Product getProduct() {
     	Product pro = new Product(); 
     	pro.setDescription("Primer producto");
@@ -60,7 +60,7 @@ public class ProductController {
     	pro.setTotal(new  BigDecimal("100.00"));
     	pro.setUnitPrice(new  BigDecimal("100.00"));
     	pro.setUrlImage("https://www.google.com.mx/search?q=imagen&source=lnms&tbm=isch&sa=X&ved=0ahUKEwjV887i3bbVAhUs6IMKHU0jCGsQ_AUICigB&biw=1366&bih=662#imgrc=NIkfcA3v4RfGAM:");
-    	pro= productService.getProducts(pro);
+    	//pro=  (Product) dwrService.consulta(pro);//productService.getProducts(pro);
         return pro;
     }
     

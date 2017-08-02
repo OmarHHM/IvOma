@@ -13,7 +13,7 @@ import org.directwebremoting.annotations.RemoteProperty;
 
 @Entity
 @Table(name = "products")
-@DataTransferObject
+@DataTransferObject(type="bean",javascript="productService")
 public class Product {
 	@RemoteProperty
 	private Long id;

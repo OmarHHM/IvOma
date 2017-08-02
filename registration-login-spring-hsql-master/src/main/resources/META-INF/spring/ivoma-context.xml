@@ -12,7 +12,7 @@
  
  
 <!-- DWR Configurations -->
-              <dwr:controller id="dwrController" debug="false">
+              <dwr:controller id="dwrController" debug="true">
                      <dwr:config-param name="crossDomainSessionSecurity" value="false"/> 
               </dwr:controller>
                
@@ -25,7 +25,11 @@
                      </props>
               </property>
               </bean>
-        
+        <!-- 
        <dwr:annotation-config />
-       <dwr:annotation-scan base-package="web.app.morrito" scanDataTransferObject="true" scanRemoteProxy="true" />
-       </beans>
+       <dwr:configuration>
+       		<dwr:convert type="bean" class="web.app.morrito.model.Product"/>
+       </dwr:configuration>-->
+        <dwr:annotation-scan base-package="web.app.morrito" scanDataTransferObject="true" scanRemoteProxy="true" /> 
+       
+</beans>

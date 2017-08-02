@@ -18,7 +18,14 @@
     <script src="${contextPath}/resources/js/jquery.min.js"></script>
 	<script src="${contextPath}/resources/js/bootstrap.min.js"></script>
 	<script src="${contextPath}/resources/js/products/products.js"></script>
-	
+	 <script type="text/javascript" src='%=request.getContextPath()%>/dwr/interface/dwrService.js'></script>
+     <script type="text/javascript" src='%=request.getContextPath()%>/dwr/engine.js'></script>
+     <script type="text/javascript" src='%=request.getContextPath()%>/dwr/util.js'></script>
+     <c:set var="contextPath1" value="%=request.getContextPath()"/>
+     <script type="text/javascript">
+     		alert(contextPath+"------"+contextPath1);
+     
+     </script>
 </head>
 <body> 
 	<form:form class="contact_form"  modelAttribute="productForm" id="contact_form" method="GET" >
