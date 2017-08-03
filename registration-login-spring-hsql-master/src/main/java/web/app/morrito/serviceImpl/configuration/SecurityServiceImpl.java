@@ -1,4 +1,4 @@
-package web.app.morrito.service;
+package web.app.morrito.serviceImpl.configuration;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,6 +9,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Service;
+
+import web.app.morrito.service.configuration.SecurityService;
 
 @Service
 public class SecurityServiceImpl implements SecurityService{

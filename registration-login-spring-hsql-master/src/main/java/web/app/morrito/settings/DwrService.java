@@ -7,7 +7,7 @@ import org.directwebremoting.annotations.RemoteMethod;
 import org.directwebremoting.annotations.RemoteProxy;
 import org.springframework.stereotype.Service;
 
-import web.app.morrito.model.Product;
+import web.app.morrito.model.product.Product;
 
 //@Service
 //@RemoteProxy(name="dwrService")

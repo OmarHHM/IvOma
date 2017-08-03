@@ -1,12 +1,14 @@
-package web.app.morrito.service;
+package web.app.morrito.serviceImpl.product;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import web.app.morrito.model.Product;
-import web.app.morrito.repository.ProductRepository;
+import web.app.morrito.model.product.Product;
+import web.app.morrito.repository.product.ProductRepository;
+import web.app.morrito.service.product.ProductService;
 @Service
 public class ProductServiceImpl implements ProductService {
 
@@ -34,7 +36,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	@Override
-	public ArrayList<Product> listProducts(Product product) {
+	public List<Product> listProducts(Product product) {
 		return (ArrayList<Product>) productRepository.findAll();
 	}
 

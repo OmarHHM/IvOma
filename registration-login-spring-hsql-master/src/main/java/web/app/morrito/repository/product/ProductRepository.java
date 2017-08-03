@@ -1,4 +1,4 @@
-package web.app.morrito.repository;
+package web.app.morrito.repository.product;
 
 import java.util.ArrayList;
 
@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
-import web.app.morrito.model.Product;
+import web.app.morrito.model.product.Product;
 
 public interface ProductRepository extends JpaRepository<Product, Long>{
 

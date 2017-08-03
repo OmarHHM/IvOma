@@ -11,9 +11,9 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import web.app.morrito.model.Rol;
-import web.app.morrito.model.User;
-import web.app.morrito.repository.UserRepository;
+import web.app.morrito.model.user.Rol;
+import web.app.morrito.model.user.User;
+import web.app.morrito.repository.user.UserRepository;
 
 import java.util.HashSet;
 import java.util.Set;

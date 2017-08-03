@@ -1,6 +1,6 @@
-package web.app.morrito.service;
+package web.app.morrito.service.user;
 
-import web.app.morrito.model.User;
+import web.app.morrito.model.user.User;
 
 public interface UserService {
     void save(User user);

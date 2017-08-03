@@ -4,9 +4,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import web.app.morrito.model.User;
-import web.app.morrito.repository.RoleRepository;
-import web.app.morrito.repository.UserRepository;
+import web.app.morrito.model.user.User;
+import web.app.morrito.repository.user.RoleRepository;
+import web.app.morrito.repository.user.UserRepository;
+import web.app.morrito.service.user.UserService;
 
 import java.util.HashSet;
 

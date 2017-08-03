@@ -7,8 +7,8 @@ import org.springframework.validation.Errors;
 import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
 
-import web.app.morrito.model.User;
-import web.app.morrito.service.UserService;
+import web.app.morrito.model.user.User;
+import web.app.morrito.service.user.UserService;
 
 @Component
 public class UserValidator implements Validator {

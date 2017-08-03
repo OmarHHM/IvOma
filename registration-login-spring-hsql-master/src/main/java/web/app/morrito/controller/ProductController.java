@@ -2,6 +2,7 @@ package web.app.morrito.controller;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.List;
 
 import javax.annotation.Resource;
 
@@ -14,8 +15,8 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import web.app.morrito.model.Product;
-import web.app.morrito.service.ProductService;
+import web.app.morrito.model.product.Product;
+import web.app.morrito.service.product.ProductService;
 import web.app.morrito.settings.DwrService;
 
 @Controller
@@ -66,7 +67,7 @@ public class ProductController {
     
     /*searchProduct :::::::::: Se ocupa para busqueda de productos por una descripción*/
     @RequestMapping(value = {"/", "/searchProduct"}, method = RequestMethod.GET)
-    public ArrayList<Product> searchProduct(@ModelAttribute("productForm") Product product) {
+    public List<Product> searchProduct(@ModelAttribute("productForm") Product product) {
     	return productService.searchProducts(product);
          
     }
@@ -77,7 +78,7 @@ public class ProductController {
      * 
      * **/
     @RequestMapping(value = {"/", "/listProduct"}, method = RequestMethod.GET)
-    public ArrayList<Product> listProducts(@ModelAttribute("productForm") Product product ) {
+    public List<Product> listProducts(@ModelAttribute("productForm") Product product ) {
     	return  productService.listProducts(product );
          
     }

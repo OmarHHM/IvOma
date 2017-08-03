@@ -1,4 +1,4 @@
-package web.app.morrito.model;
+package web.app.morrito.model.sale;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

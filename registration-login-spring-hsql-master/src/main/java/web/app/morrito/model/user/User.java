@@ -1,4 +1,4 @@
-package web.app.morrito.model;
+package web.app.morrito.model.user;
 
 import javax.persistence.*;
 

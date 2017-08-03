@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import web.app.morrito.model.User;
-import web.app.morrito.service.SecurityService;
-import web.app.morrito.service.UserService;
+import web.app.morrito.model.user.User;
+import web.app.morrito.service.configuration.SecurityService;
+import web.app.morrito.service.user.UserService;
 import web.app.morrito.validator.UserValidator;
 
 @Controller

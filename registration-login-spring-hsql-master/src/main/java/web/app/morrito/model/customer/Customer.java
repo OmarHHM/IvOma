@@ -1,4 +1,4 @@
-package web.app.morrito.model;
+package web.app.morrito.model.customer;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package web.app.morrito.service;
+package web.app.morrito.service.configuration;
 
 public interface SecurityService {
     String findLoggedInUsername();
