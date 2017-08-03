@@ -1,4 +1,4 @@
-package web.app.morrito.controller;
+package web.app.morrito.controller.user;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import web.app.morrito.model.user.User;
 import web.app.morrito.service.configuration.SecurityService;
 import web.app.morrito.service.user.UserService;
-import web.app.morrito.validator.UserValidator;
+import web.app.morrito.utils.validator.UserValidator;
 
 @Controller
 public class UserController {

@@ -1,4 +1,4 @@
-package web.app.morrito.service;
+package web.app.morrito.serviceImpl.user;
 
 import org.apache.log4j.Logger;
 import org.slf4j.LoggerFactory;

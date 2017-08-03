@@ -1,4 +1,4 @@
-package web.app.morrito.controller;
+package web.app.morrito.controller.customer;
 
 import org.springframework.stereotype.Controller;
 

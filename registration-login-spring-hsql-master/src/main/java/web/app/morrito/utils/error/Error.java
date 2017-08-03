@@ -1,4 +1,4 @@
-package web.app.morrito.errors;
+package web.app.morrito.utils.error;
 
 public class Error {
 

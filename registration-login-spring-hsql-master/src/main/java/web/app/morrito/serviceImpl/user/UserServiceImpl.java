@@ -1,4 +1,4 @@
-package web.app.morrito.service;
+package web.app.morrito.serviceImpl.user;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

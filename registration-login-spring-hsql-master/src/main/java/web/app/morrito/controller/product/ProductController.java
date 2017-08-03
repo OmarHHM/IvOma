@@ -1,4 +1,4 @@
-package web.app.morrito.controller;
+package web.app.morrito.controller.product;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import web.app.morrito.model.product.Product;
 import web.app.morrito.service.product.ProductService;
-import web.app.morrito.settings.DwrService;
+import web.app.morrito.utils.settings.dwr.DwrService;
 
 @Controller
 @RemoteProxy(name="dwrService")

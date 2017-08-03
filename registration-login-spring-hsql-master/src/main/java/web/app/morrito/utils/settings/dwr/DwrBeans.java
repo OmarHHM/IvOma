@@ -1,4 +1,4 @@
-package web.app.morrito.settings;
+package web.app.morrito.utils.settings.dwr;
 
 import org.directwebremoting.annotations.DataTransferObject;
 import org.directwebremoting.spring.DwrAnnotationPostProcessor;

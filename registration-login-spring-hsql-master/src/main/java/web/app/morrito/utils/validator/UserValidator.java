@@ -1,4 +1,4 @@
-package web.app.morrito.validator;
+package web.app.morrito.utils.validator;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
